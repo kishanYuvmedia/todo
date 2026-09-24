@@ -2,12 +2,15 @@ import Card from "./componets/Card";
 import Header from "./componets/header";
 import './App.css'
 import Hooks from "./componets/hooks";
+import UseEffectbox from "./componets/useeffectbox";
+import FormText from "./componets/formtext";
 function App() {
   return (
     <>
-    <Hooks/>
-
-
+    {/* <Hooks/> */}
+    <UseEffectbox/>
+    <hr/>
+    <FormText/>
 
       {/* <Card title={'Ajmer'} tag={<Card/>}>
         <h1>More Than
