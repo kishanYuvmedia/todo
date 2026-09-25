@@ -3,14 +3,14 @@ import Header from "./componets/header";
 import './App.css'
 import Hooks from "./componets/hooks";
 import UseEffectbox from "./componets/useeffectbox";
-import FormText from "./componets/formtext";
+import ColorPicker from "./componets/Color";
 function App() {
   return (
     <>
     {/* <Hooks/> */}
-    <UseEffectbox/>
+    {/* <UseEffectbox/> */}
     <hr/>
-    <FormText/>
+    <ColorPicker/>
 
       {/* <Card title={'Ajmer'} tag={<Card/>}>
         <h1>More Than
