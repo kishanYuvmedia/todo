@@ -4,14 +4,18 @@ import './App.css'
 import Hooks from "./componets/hooks";
 import UseEffectbox from "./componets/useeffectbox";
 import ColorPicker from "./componets/Color";
+import ControlStatment from "./componets/Controlstatment";
+import Loop from "./componets/loop";
+import ProductList from "./example/productlist";
 function App() {
   return (
     <>
+    <ProductList/>
+    {/* <Loop/> */}
     {/* <Hooks/> */}
     {/* <UseEffectbox/> */}
-    <hr/>
-    <ColorPicker/>
-
+    {/* <ColorPicker/> */}
+    {/* <ControlStatment/> */}
       {/* <Card title={'Ajmer'} tag={<Card/>}>
         <h1>More Than
           Just Objects</h1>
