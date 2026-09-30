@@ -1,34 +1,25 @@
-import Card from "./componets/Card";
-import Header from "./componets/header";
 import './App.css'
-import Hooks from "./componets/hooks";
-import UseEffectbox from "./componets/useeffectbox";
-import ColorPicker from "./componets/Color";
-import ControlStatment from "./componets/Controlstatment";
-import Loop from "./componets/loop";
-import ProductList from "./example/productlist";
+import {BrowserRouter,Route, Routes } from "react-router"
+import Home from './pages/home'
+import About from './pages/about'
+import Contact from './pages/contact'
+import UserContext from './context/theme'
+import { useState } from 'react'
 function App() {
+  const [theme,setTheme]=useState('Light')
   return (
     <>
-    <ProductList/>
-    {/* <Loop/> */}
-    {/* <Hooks/> */}
-    {/* <UseEffectbox/> */}
-    {/* <ColorPicker/> */}
-    {/* <ControlStatment/> */}
-      {/* <Card title={'Ajmer'} tag={<Card/>}>
-        <h1>More Than
-          Just Objects</h1>
-        <p>At Shree Craft Studio, we bring the soul of Rajasthan into your home. Each piece is a story — carved by skilled hands, inspired by heritage, and made to be cherished for generations.</p>
-      </Card>
-      <Card title={'Ajmer'}>
-        <h1>More Than
-          Just Objects</h1>
-        <p>At Shree Craft Studio, we bring the soul of Rajasthan into your home. Each piece is a story — carved by skilled hands, inspired by heritage, and made to be cherished for generations.</p>
-      </Card>
-      <Header/> */}
+    <BrowserRouter>
+      <button type='button' onClick={()=>setTheme(theme=='Dark'?'Light':'Dark')}>{theme=='Dark'?'Light':'Dark'}</button>
+        <UserContext.Provider  value={theme} >
+          <Routes>
+              <Route path='home' element={<Home name={'Rajesh'}/>}/>
+               <Route path='about' element={<About/>}/>
+                <Route path='contact' element={<Contact/>}/>
+          </Routes>
+          </UserContext.Provider>
+    </BrowserRouter>
     </>
   )
 }
-
 export default App
