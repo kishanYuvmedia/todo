@@ -7,6 +7,8 @@ import UserContext from './context/theme'
 import { useState } from 'react'
 import Counter from './pages/counter'
 import Login from './login'
+import Cart from './pages/cart'
+import CallBackApp from './pages/callback'
 
 function App() {
   const [theme,setTheme]=useState('Light')
@@ -22,6 +24,8 @@ function App() {
                 <Route path='contact' element={<Contact/>}/>
                 <Route path='counter' element={<Counter/>} />
                 <Route path='login' element={<Login/>}/>
+                <Route path='cart' element={<Cart/>}/>
+                <Route path='callBackApp' element={<CallBackApp/>} />
           </Routes>
           </UserContext.Provider>
     </BrowserRouter>
